@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "IRANYekanX";
+  src: url("../fonts/iran-yekan/IRANYekanXVF.woff2") format("woff2"),
+    url("../fonts/iran-yekan/IRANYekanXVF.woff") format("woff");
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANYekanX Static";
+  src: url("../fonts/iran-yekan/IRANYekanX-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANYekanX Static";
+  src: url("../fonts/iran-yekan/IRANYekanX-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Shared tokens based on the supplied auth, dashboard, and task screenshots. */
+@theme {
+  --font-sans: "IRANYekanX", "IRANYekanX Static", Tahoma, "Segoe UI", Arial, sans-serif;
+
+  --color-brand: #104da7;
+  --color-brand-hover: #0d408d;
+  --color-brand-soft: #aac5e9;
+  --color-brand-muted: #829ec6;
+  --color-canvas: #d9e5f5;
+  --color-surface: #ffffff;
+  --color-ink: #262626;
+  --color-ink-muted: #5f6670;
+  --color-border: #aeb5bf;
+  --color-highlight: #ffc400;
+
+  --spacing: 0.25rem;
+  --spacing-control: 1rem;
+  --spacing-panel: 1.5rem;
+  --spacing-page: 2rem;
+  --radius-panel: 1rem;
+  --radius-control: 0.5rem;
+
+  --text-page-title: 2.5rem;
+  --text-page-title--line-height: 1.25;
+  --text-section-title: 1.5rem;
+  --text-section-title--line-height: 1.4;
+  --text-body: 1rem;
+  --text-body--line-height: 1.75;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
